@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { motion, useScroll, useTransform, useMotionTemplate, useMotionValueEvent } from 'framer-motion';
+import { motion, useScroll, useTransform, useMotionTemplate } from 'framer-motion';
 import Artbackground from "../assets/bgimg.jpg";
 import skull from '../assets/skull.jpg';
 import table from '../assets/table.jpeg';
@@ -31,7 +31,6 @@ const CenterImage = () => {
     const clipPath = useMotionTemplate`polygon(${clip1}% ${clip1}%, ${clip2}% ${clip1}%, ${clip2}% ${clip2}%, ${clip1}% ${clip2}%)`; 
 
     const opacity = useTransform(scrollY, [SECTION_HEIGHT, SECTION_HEIGHT + 50000], [1, 0]);
-
     const backgroundSize = useTransform(scrollY, [0, SECTION_HEIGHT + 2000], ["170%", "60%"]);
 
     return (
@@ -57,28 +56,28 @@ const ParallaxImages = () => {
             alt="skull hovering"
             start={-200}
             end={200}
-            className="w-1/3"
+            className="w-1/3 sm:w-1/2 md:w-1/3"
             />
-            {<ParallaxImg
+            <ParallaxImg
             src={table}
             alt="table work"
             start={200}
             end={-250}
-            className="mx-auto w-2/3"
-            />}
+            className="mx-auto w-2/3 sm:w-3/4 md:w-2/3"
+            />
             <ParallaxImg
             src={glass}
             alt="glass hover"
             start={-200}
             end={200}
-            className="ml-auto w-1/3"
+            className="ml-auto w-1/3 sm:w-1/2 md:w-1/3"
             />
             <ParallaxImg
             src={robot}
             alt="robot arm"
             start={-500}
             end={-800}
-            className="ml-24 w-5/12"
+            className="ml-24 w-5/12 sm:w-3/4 md:w-5/12"
             />
         </div>
     );
@@ -99,9 +98,7 @@ const ParallaxImg = ({
     });
 
     const opacity = useTransform(scrollYProgress, [0.75, 1], [1, 0]);
-
     const y = useTransform(scrollYProgress, [0, 1], [start, end]);
-
     const scale = useTransform(scrollYProgress, [0.75, 1], [1, 0]);
 
     const transform = useMotionTemplate`translateY(${y}px) scale(${scale})`;

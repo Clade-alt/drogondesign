@@ -4,7 +4,7 @@ import ServiceCard from './ServiceCard';
 
 const ServiceSection = () => {
     return (
-        <section className="w-full bg-yellow-500 py-16 md:py-20 lg:py-24 flex items-center my-auto"
+        <section className="w-full bg-yellow-500 py-16 md:py-20 lg:py-24 flex items-center"
             style={{ height: `calc(${SECTION_HEIGHT}px + 100vh)` }} 
         >
             <div className="w-full h-full mx-auto px-4 sm:px-6 lg:px-8 items-center">
@@ -12,16 +12,16 @@ const ServiceSection = () => {
                     text="OUR SERVICES"
                     start={-200}
                     end={200}
-                    className="w-full text-[#310] text-7xl md:text-5xl lg:text-8xl font-bold text-center px-10"
+                    className="w-full text-[#310] text-5xl sm:text-6xl md:text-5xl lg:text-8xl font-bold text-center px-10"
                 />
                 <ParallaxDiv
                     text="We offer a range of graphic design services to help your business stand out."
                     start={-300}
                     end={300}
-                    className="w-full text-yellow-900 text-4xl md:text-3xl lg:text-5xl text-center my-20 px-10"
+                    className="w-full text-yellow-900 text-2xl sm:text-3xl md:text-3xl lg:text-5xl text-center my-20 px-10"
                 />
 
-                <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-32 p-10 items-center my-40">
+                <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10 p-10 items-center my-40">
                     <ServiceCard
                         title="UI/UX Design"
                         description="Our UI/UX design services focus on usability, accessibility, and aesthetics to ensure your product is user-friendly and engaging."

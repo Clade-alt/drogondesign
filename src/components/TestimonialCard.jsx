@@ -16,13 +16,14 @@ const TestimonialCard = ({ testimonial, name, start, end }) => {
         <motion.div
             ref={ref}
             style={{ opacity, x }}
+            className="flex justify-center"
         >
-            <div className="bg-[#310] text-gray-800 rounded-lg shadow-md p-6 mx-10 flex flex-col items-center transform transition-transform duration-300 hover:scale-105 cursor-pointer">
-            <div className="mb-4 bg-yellow-800 rounded-full p-4 md:p-6 ">
-                <FiUser className="text-4xl md:text-6xl text-[#310]" />
-            </div>
-            <p className="text-yellow-100 text-xl font-semibold text-center mb-4">"{testimonial}"</p>
-            <p className="text-yellow-500 font-semibold text-xl hover:underline">{name}</p>
+            <div className="bg-[#310] text-gray-800 rounded-lg shadow-md p-4 sm:p-6 w-full sm:w-5/6 flex flex-col items-center transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+                <div className="mb-4 bg-yellow-800 rounded-full p-4 md:p-6">
+                    <FiUser className="text-4xl md:text-6xl text-[#310]" />
+                </div>
+                <p className="text-yellow-100 text-base sm:text-xl font-semibold text-center mb-4">"{testimonial}"</p>
+                <p className="text-yellow-500 font-semibold text-base sm:text-xl hover:underline">{name}</p>
             </div>
         </motion.div>
     );

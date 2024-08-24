@@ -25,7 +25,7 @@ const TestimonialsSection = () => {
                         initial={{ y: 20, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ ease: "easeInOut", duration: 0.75 }}
-                        className="text-center text-[#310] text-7xl md:text-7xl lg:text-8xl font-bold my-10"
+                        className="text-center text-[#310] text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold my-10"
                     >
                         Client Testimonials
                     </motion.h2>
@@ -33,14 +33,14 @@ const TestimonialsSection = () => {
                         initial={{ y: 20, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         transition={{ ease: "easeInOut", duration: 0.75 }}
-                        className="text-center text-yellow-900 text-4xl md:text-3xl lg:text-5xl my-10 w-full"
+                        className="text-center text-yellow-900 text-2xl sm:text-3xl md:text-3xl lg:text-5xl my-10 w-full"
                     >
                         Hear from our satisfied clients who trust us with their design needs.
                     </motion.p>
                 </motion.div>
 
                 {/* Testimonial Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <TestimonialCard
                         testimonial="Drogon exceeded our expectations with their creative design solutions."
                         name="John Doe"
@@ -65,4 +65,4 @@ const TestimonialsSection = () => {
     );
 };
 
-export default TestimonialsSection;
+export default TestimonialsSection

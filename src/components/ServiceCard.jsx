@@ -19,19 +19,20 @@ const ServiceCard = ({ title, description, link, start, end }) => {
         <motion.div
             ref={ref}
             style={{ transform, opacity }}
+            className="flex justify-center"
         >
-            <div className="bg-[#310] w-84 h-64 rounded-lg shadow-md p-6 transform transition-transform duration-300 hover:scale-105 cursor-pointer">
-                <h3 className="text-yellow-500 text-left text-2xl font-bold mb-4">{title}</h3>
-                <p className="text-yellow-100 text-base h-24 font-semibold text-left mb-6">{description}</p>
+            <div className="bg-[#310] w-full sm:w-80 h-64 rounded-lg shadow-md p-6 transform transition-transform duration-300 hover:scale-105 cursor-pointer">
+                <h3 className="text-yellow-500 text-left text-xl sm:text-2xl font-bold mb-4">{title}</h3>
+                <p className="text-yellow-100 text-sm sm:text-base h-24 font-semibold text-left mb-6">{description}</p>
                 <a
                     href={link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-yellow-500 font-semibold text-xl hover:underline cursor-pointer">
+                    className="text-yellow-500 font-semibold text-lg hover:underline cursor-pointer">
                     Learn More
                 </a>
             </div>
-        </motion.div >
+        </motion.div>
     );
 };
 
