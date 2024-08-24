@@ -1,6 +1,9 @@
 import { SECTION_HEIGHT } from "../sectionHeight";
 import ParallaxDiv from "./ParallaxDiv";
 import PortfolioCard from "./PortfolioCard";
+import port0 from "../assets/port0.jpg";
+import port1 from "../assets/port2.jpg";
+import port2 from "../assets/port2.jpg";
 
 const PortfolioSection = () => {
     return (
@@ -30,21 +33,21 @@ const PortfolioSection = () => {
                     <PortfolioCard
                         title="Project Alpha"
                         description="A complete branding package for a tech startup."
-                        image="/src/assets/about-us.jpg"
+                        image={port0}
                         start={-200}
                         end={100}
                     />
                     <PortfolioCard
                         title="Project Beta"
                         description="Web design and development for an e-commerce platform."
-                        image="/src/assets/port1.jpg"
+                        image={port1}
                         start={-200}
                         end={200}
                     />
                     <PortfolioCard
                         title="Project Gamma"
                         description="Logo and print design for a local restaurant."
-                        image="/src/assets/port2.jpg"
+                        image={port2}
                         start={-200}
                         end={200}
                     />
